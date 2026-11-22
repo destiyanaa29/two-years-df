@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#fff5c9" />
+  <meta name="description" content="A little universe made with love for Desti & Farel." />
+  <title>Our Little Universe — Desti & Farel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=game-music-v2" />
+</head>
+<body>
+  <div class="grain"></div><div class="sun-orbit sun-orbit-one">☀</div><div class="sun-orbit sun-orbit-two">✦</div>
+  <header class="topbar">
+    <a class="brand" href="#home"><span class="brand-flower">✿</span> our little universe</a>
+    <div class="top-actions"><span class="anniv-pill">22 NOV 2026 · OUR DAY</span><button id="gameMusicToggle" class="game-music-toggle" type="button" aria-label="Nyalakan musik game" aria-pressed="false" title="Musik game">♫</button></div>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-sparkle s1">✦</div><div class="hero-sparkle s2">✧</div>
+      <div class="hero-copy">
+        <p class="eyebrow">SUNSHINE ARCADE · OUR LITTLE STORY</p>
+        <h1>Ready, player<br><em>two?</em></h1>
+        <p class="hero-sub">Farel, ayo selesaikan misi ini! Kalau menang ada hadiah. Kalau kalah… jangan nyalahin sinyal!! WKWK 🌻</p>
+        <button class="primary-btn" id="startBtn">Mulai petualangan <span>↗</span></button>
+        <p class="tiny-note">peringatan: game ini mengandung kenangan, gombalan, dan sedikit ancaman ☀</p>
+      </div>
+      <div class="hero-art">
+        <div class="sun sun-back"></div><div class="sunflower"><div class="flower-center">D<span>♥</span>F</div></div>
+        <div class="polaroid hero-photo">
+          <img
+            src="assets/photos/foto1.jpg"
+            alt="Our favorite little moments"
+          >
+          <p>my favorite person ♡</p>
+        </div>
+        <span class="hand-note note-one">you're my sunshine ☀</span><span class="hand-note note-two">22 · 11 · 24</span>
+      </div>
+      <div class="scroll-cue">READY FOR A SUNSHINE QUEST? <span>☀</span></div>
+    </section>
+
+<section class="arcade-section flight-section section" id="flight-game">
+      <div class="section-kicker">THE LITTLE JOURNEY</div>
+      <div class="center-heading"><h2>Fly through the <em>sunshine.</em></h2><p>Terbang yang bener, pilot! Ada tiga bunga yang harus dikumpulkan sebelum sampai tujuan. Jangan sampai perlu Google Maps.</p></div>
+      <div class="flight-hud"><span id="flightDistance">READY TO FLY ✈</span><span id="flightStars">🌼 0 / 3</span></div>
+      <div class="flight-frame"><canvas id="flightCanvas" width="780" height="360" aria-label="Game terbang melewati rintangan menuju Desti"></canvas><div class="flight-overlay" id="flightOverlay"><div class="flight-overlay-card"><span>✈️ ☀️</span><b>Siap terbang, Farel?</b><small>Hindari awan gelap, ambil 3 bunga matahari, lalu temukan Desti di ujung perjalanan.</small><button type="button" id="flightStart" class="primary-btn">Mulai terbang ↗</button></div></div></div>
+      <div class="flight-controls"><button type="button" id="flightUp" aria-label="Terbang">↑ TAP TO FLY</button><span>atau tekan tombol spasi</span><button type="button" id="flightRestart" class="mini-btn">↻ Ulangi</button></div>
+      <p class="game-status" id="flightStatus">Perjalanan kecil menuju seseorang yang jadi rumah. 🌻</p>
+    </section>
+
+<section class="intro section" id="story">
+      <div class="section-kicker">BETWEEN THE SIDE QUESTS · THE BEGINNING</div>
+      <div class="intro-grid"><div><h2>Plot twist dari <em>TEBAS.</em></h2><p class="body-copy">Awalnya kita cuma saling kenal di KOMA. Terus pas TEBAS, aku sibuk di divisi acara, sementara kamu jadi KSK sekaligus pegang Instagram KOMA. Aku kebagian mengatur dan mengontrol konten yang perlu diunggah, kamu yang mengurus Instagram-nya. Jadilah ada alasan buat koordinasi, lalu obrolan yang awalnya soal acara mulai melebar ke mana-mana. Dari sering chat, bercanda, sampai akhirnya ketemu berdua dan boncengan. Siapa sangka urusan koordinasi bisa punya plot twist sepanjang ini? Aigoo.</p><p class="handwriting">Dulu: “konten ini kapan upload ka?” Sekarang: “besok kita ke mana sayang?” ☀</p></div>
+        <div class="ticket-card"><span class="ticket-label">ADMIT TWO</span><div class="ticket-number">02</div><strong>YEARS TOGETHER</strong><div class="ticket-line"></div><p>two players, one growing story<br>still collecting side quests</p><span class="ticket-stamp">D + F</span></div></div>
+    </section>
+
+<section class="game-section section" id="game">
+      <div class="section-kicker">FIRST LITTLE MISSION</div><div class="center-heading"><h2>Find the <em>sunshine.</em></h2><p>Enam kelopak kabur dan sembunyi di taman ini. Cari satu-satu ya, bocil detektif. 👀</p></div>
+      <div class="petal-progress" id="petalProgress"><span class="petal-count">0 / 6 kelopak ditemukan</span><div class="progress-track"><div id="progressFill"></div></div></div>
+      <div class="petal-hunt-scene" id="petalHuntScene" aria-label="Taman tempat enam kelopak bersembunyi">
+        <div class="hunt-cloud cloud-a">☁️</div><div class="hunt-cloud cloud-b">☁️</div>
+        <div class="hunt-sun">☀️</div><div class="hunt-hill hill-a"></div><div class="hunt-hill hill-b"></div>
+        <div class="hunt-prop prop-pot">🪴</div><div class="hunt-prop prop-basket">🧺</div><div class="hunt-prop prop-book">📚</div><div class="hunt-prop prop-mushroom">🍄</div>
+        <div class="hunt-prop prop-tree">🌳</div><div class="hunt-prop prop-bench">🪑</div><div class="hunt-prop prop-mailbox">📮</div><div class="hunt-prop prop-watering">🚿</div>
+        <div class="hunt-prop prop-pond">🦆</div><div class="hunt-prop prop-picnic">🧺</div><div class="hunt-prop prop-butterfly">🦋</div><div class="hunt-prop prop-rocks">🪨</div>
+        <div class="hunt-prop prop-sign">🪧</div><div class="hunt-prop prop-lantern">🏮</div><div class="hunt-prop prop-tulips">🌷</div><div class="hunt-prop prop-bird">🐦</div>
+        <button class="hidden-petal petal-one" data-petal="0" aria-label="Ambil kelopak tersembunyi pertama">🌼</button>
+        <button class="hidden-petal petal-two" data-petal="1" aria-label="Ambil kelopak tersembunyi kedua">🌼</button>
+        <button class="hidden-petal petal-three" data-petal="2" aria-label="Ambil kelopak tersembunyi ketiga">🌼</button>
+        <button class="hidden-petal petal-four" data-petal="3" aria-label="Ambil kelopak tersembunyi keempat">🌼</button>
+        <button class="hidden-petal petal-five" data-petal="4" aria-label="Ambil kelopak tersembunyi kelima">🌼</button>
+        <button class="hidden-petal petal-six" data-petal="5" aria-label="Ambil kelopak tersembunyi keenam">🌻</button>
+        <span class="hunt-hint hint-a">psst...</span><span class="hunt-hint hint-b">ada sesuatu?</span><span class="hunt-hint hint-c">jangan buru-buru 👀</span>
+      </div>
+      <div class="petal-message" id="petalMessage" aria-live="polite"><span>✿</span><p>Petunjuk: jangan cuma lihat tengah layar. Coba intip dekat benda-benda di taman. 😏</p></div>
+    </section>
+
+<section class="intro section" id="little-things">
+      <div class="section-kicker">THE MANY RANDOM EPISODES OF US</div>
+      <div class="center-heading"><h2>Our very <em>own sitcom.</em></h2><p>Hubungan ini genrenya campur-campur: komedi, road trip, sedikit drama, lalu balik lagi cari makan.</p></div>
+      <div class="petal-grid">
+        <article class="petal-card personal-card"><span class="petal-icon">🗺️</span><b>Farel the planner</b><small>Dulu kamu sering jadi tim pencari tempat dan penyusun agenda date. Aku tinggal ikut, sambil kasih review bintang lima atau komplain manja. WKWK.</small></article>
+        <article class="petal-card personal-card"><span class="petal-icon">🎮</span><b>PS & Netflix era</b><small>Akhir-akhir ini suka mampir ke tempat PS, main bareng, atau lanjut Netflix-an. Quality time versi: rebutan pilihan game dan film.</small></article>
+        <article class="petal-card personal-card"><span class="petal-icon">🎁</span><b>Small but memorable</b><small>Ganci lucu, hadiah kecil, cemilan, sampai susu. Kadang yang bikin senang bukan barangnya, tapi karena kamu kepikiran buat bawain.</small></article>
+        <article class="petal-card personal-card"><span class="petal-icon">🚗</span><b>“Sini, aku anter.”</b><small>Kalimat sederhana yang sering bikin hati tenang. Saat aku butuh bantuan, kamu berusaha ada dan kadang langsung menawarkan untuk mengantar.</small></article>
+        <article class="petal-card personal-card"><span class="petal-icon">🗣️</span><b>Mode bocil aktif</b><small>Lagi gemas sedikit: “bocil”, “utuuutuu cayangg”. Bahasa komunikasi orang dewasa? Tidak berlaku di sini.</small></article>
+        <article class="petal-card personal-card"><span class="petal-icon">🥹</span><b>Crying episode</b><small>Pernah diem-dieman agak lama, lalu malah sama-sama netesin air mata. Ga tau deh kalo orang lain liatnya gimana? Alayy kali ya kita😭</small></article>
+        <article class="petal-card personal-card"><span class="petal-icon">🧸</span><b>Side quests</b><small>Dari pantai, lihat pemandangan bukit/hijau-hijau, keliling klaten-Jogja, sampai kafe games. Daftar tempat yang belum didatangi masih panjang!</small></article>
+        <article class="petal-card personal-card"><span class="petal-icon">🤝</span><b>Tim baikan</b><small>Kalau lagi ada masalah, biasanya diem dulu sampai emosi reda. dan kamu mulai nanya, lalu pelan-pelan dibicarakan. Nggak harus langsung selesai, yang penting mau memahami.</small></article>
+      </div>
+      <div class="game-memory"><div class="game-emoji">🫶</div><div><b>Quality time, versi kita.</b><p>Nggak harus selalu punya agenda besar. Kadang cukup pergi berdua, cari suasana baru, atau duduk bareng sambil menikmati waktu. Ternyata sesederhana itu juga bisa jadi hal yang ditunggu.</p></div></div>
+    </section>
+
+<section class="quiz-section section" id="quiz">
+      <div class="section-kicker">SEBERAPA KENAL KAMU SAMA AKU?</div><div class="quiz-card"><div class="quiz-top"><span>THE COUPLE QUIZ</span><span id="quizStep">Pertanyaan 1</span></div><h2 id="question">Apa yang paling cocok jadi agenda date sederhana kita?</h2><div class="answers" id="answers"></div><p class="quiz-feedback" id="quizFeedback">Jawab santai aja. Kalau salah, siap-siap kena omel bocil. 😤</p><button id="nextQuestion" class="text-btn" disabled>Lanjut <span>→</span></button></div>
+    </section>
+
+<section class="memory-section section" id="origin-story">
+      <div class="section-kicker">A TINY DETAIL I NEVER FORGOT</div>
+      <div class="center-heading"><h2>“destiew” <em>🌻</em></h2><p>Belum jadian, tapi nama kontaknya sudah punya ciri khas. Hmmm, mencurigakan.</p></div>
+      <div class="memory-feature">
+        <div class="contact-card"><div class="contact-top"><span>9:41</span><span>•••</span></div><div class="contact-avatar">D<span>🌻</span></div><div class="contact-name">destiew 🌻</div><div class="contact-sub">contact nickname · saved with sunshine</div><div class="contact-actions"><span>☎️<small>call</small></span><span>💬<small>message</small></span><span>♡<small>favorite</small></span></div></div>
+        <div class="memory-copy"><span class="sticker">caught you being sweet</span><h3>Siapa yang kepikiran nama ini duluan?</h3><p>Waktu masih pendekatan, kamu menyimpan kontakku sebagai <b>“destiew 🌻”</b>. Nggak tahu waktu itu kamu sadar atau nggak, tapi satu emoji kecil itu malah jadi detail yang masih aku ingat sampai sekarang. Jadi kalau ada yang tanya kenapa sunflower, ya… silakan tanya tersangka utamanya. WKWK.</p></div>
+      </div>
+    </section>
+
+<section class="arcade-section section" id="memory-game">
+      <div class="section-kicker">ONE MORE LITTLE GAME</div>
+      <div class="center-heading"><h2>Sunflower <em>match!</em></h2><p>Cari pasangan kartunya. Jangan sampai ingatanmu kalah sama kartu bergambar. WKWK.</p></div>
+      <div class="arcade-hud"><span id="matchMoves">Moves: 0</span><span id="matchPairs">Pairs: 0 / 6</span><button id="matchReset" class="mini-btn">↻ Reset</button></div>
+      <div class="memory-board" id="memoryBoard">
+        <button class="memory-tile" data-card="0">?</button><button class="memory-tile" data-card="1">?</button><button class="memory-tile" data-card="2">?</button><button class="memory-tile" data-card="3">?</button><button class="memory-tile" data-card="4">?</button><button class="memory-tile" data-card="5">?</button><button class="memory-tile" data-card="6">?</button><button class="memory-tile" data-card="7">?</button><button class="memory-tile" data-card="8">?</button><button class="memory-tile" data-card="9">?</button><button class="memory-tile" data-card="10">?</button><button class="memory-tile" data-card="11">?</button>
+      </div>
+      <p class="game-status" id="matchStatus">Ready? Find the 6 pairs!</p>
+    </section>
+
+    <section class="gallery-section section" id="gallery">
+      <div class="section-kicker">A LITTLE PHOTO ALBUM</div>
+    
+      <div class="gallery-heading">
+        <h2>Our tiny <em>museum.</em></h2>
+        <p>
+          Museum mini dari berbagai episode. Ada yang estetik, ada yang blur,
+          semuanya punya cerita. Klik kartunya untuk membuka kenangan!
+        </p>
+      </div>
+    
+      <div class="gallery-grid">
+    
+        <details class="polaroid gallery-item tilt-left">
+          <summary class="gallery-placeholder peach">
+            <span>📸</span>
+            <small>arsip zaman masih malu-malu</small>
+            <b>klik untuk membuka ♡</b>
+          </summary>
+          <div class="gallery-revealed">
+            <img src="assets/photos/foto2.jpg" alt="Kenangan pertama">
+            <p>the beginning</p>
+          </div>
+        </details>
+    
+        <details class="polaroid gallery-item tilt-right">
+          <summary class="gallery-placeholder pink">
+            <span>🫶</span>
+            <small>jalan-jalan tanpa banyak rencana</small>
+            <b>klik untuk membuka ♡</b>
+          </summary>
+          <div class="gallery-revealed">
+            <img src="assets/photos/foto4.jpg" alt="Momen favorit">
+            <p>my happy place</p>
+          </div>
+        </details>
+    
+        <details class="polaroid gallery-item tilt-left2">
+          <summary class="gallery-placeholder green">
+            <span>🍜</span>
+            <small>misi mencari makanan</small>
+            <b>klik untuk membuka ♡</b>
+          </summary>
+          <div class="gallery-revealed">
+            <img src="assets/photos/foto3.jpg" alt="Makan bersama">
+            <p>food is love</p>
+          </div>
+        </details>
+    
+        <details class="polaroid gallery-item tilt-right2">
+          <summary class="gallery-placeholder lilac">
+            <span>🌙</span>
+            <small>hari biasa yang jadi cerita</small>
+            <b>klik untuk membuka ♡</b>
+          </summary>
+          <div class="gallery-revealed">
+            <img src="assets/photos/foto5.jpg" alt="Random memory">
+            <p>just us being us</p>
+          </div>
+        </details>
+    
+      </div>
+    
+      <p class="gallery-tip">
+        Satu per satu dibuka, satu per satu kenangan muncul.
+        Jangan lupa senyum kalau ingat momennya! ♡
+      </p>
+    </section>
+
+    <section class="music-page section" id="music-page">
+      <div class="section-kicker">A LITTLE SOUNDTRACK FOR US</div>
+      <div class="center-heading"><h2>Press play, <em>sayang.</em></h2><p>Istirahat sebentar dari misi. Pilih lagu, duduk yang manis, dan nikmati soundtrack kecil kita. 🌻</p></div>
+      <div class="music-player-card">
+        <div class="music-art"><div class="music-sun">☀</div><div class="music-flower">🌻</div><span>OUR LITTLE SOUNDTRACK</span></div>
+        <div class="music-track-info"><span class="music-label">NOW PLAYING</span><h3>1000X</h3><p>Ghea Indrawari</p></div>
+        <audio id="anniversaryAudio" preload="metadata" loop>
+          <source src="assets/audio/1000x.mp3" type="audio/mpeg">
+        </audio>
+        <div class="music-controls">
+          <button id="trackPlay" class="primary-btn" type="button">▶ Putar lagu <span>♫</span></button>
+          <div class="music-progress-row"><span id="musicCurrent">0:00</span><input id="musicSeek" type="range" min="0" max="100" value="0" aria-label="Posisi lagu"><span id="musicDuration">0:00</span></div>
+          <div class="music-volume-row"><span>🔈</span><input id="musicVolume" type="range" min="0" max="1" step="0.01" value="0.75" aria-label="Volume lagu"><span>🔊</span></div>
+          <p id="musicStatus" class="music-status">Tekan play untuk mulai. Musik hanya diputar di halaman ini ♡</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="arcade-section riddle-section section" id="riddle-game">
+      <div class="section-kicker">OUR VERY OWN SUN CODE</div>
+      <div class="center-heading"><h2>Crack the <em>sun code.</em></h2><p>Ini bukan ujian negara, tapi kok deg-degan ya? Jawab yang bener, bocil.</p></div>
+      <div class="riddle-card">
+        <div class="riddle-top"><span id="riddleNumber">MEMORY CLUE 01</span><span id="riddleScore">0 solved</span></div>
+        <div class="riddle-emoji" id="riddleEmoji">🌻</div>
+        <h3 id="riddleQuestion">Aku selalu menghadap cahaya. Siapakah aku?</h3>
+        <div class="riddle-answers" id="riddleAnswers"></div>
+        <p id="riddleFeedback" class="game-status">Pilih jawaban yang benar!</p>
+      </div>
+    </section>
+
+<section class="letters-section section" id="letters">
+      <div class="section-kicker">SECRET MAIL SERVICE</div><div class="center-heading"><h2>Little notes, <em>for you.</em></h2><p>Pilih amplop sesuai keadaan. Isinya beda-beda, jadi jangan asal buka kayak lagi bongkar paket.</p></div>
+      <div class="envelope-grid">
+        <button class="envelope" data-letter="0"><span class="env-icon">💌</span><b>Open when you miss me</b><small>untuk hari yang terasa jauh</small></button>
+        <button class="envelope" data-letter="1"><span class="env-icon">✉️</span><b>Open when you're tired</b><small>istirahat sebentar, ya?</small></button>
+        <button class="envelope" data-letter="2"><span class="env-icon">💌</span><b>Open when you need a smile</b><small>sedikit hal receh dari aku</small></button>
+      </div>
+    </section>
+
+<section class="message-section section" id="message">
+      <div class="section-kicker">A LETTER FROM DESTI</div><div class="letter-paper"><div class="letter-date">22 November 2026</div><div class="letter-flower">🌻</div><h2>Dear <em>Farel,</em></h2>
+        <p>Happy 2nd anniversary, Sayang. Dua tahun ternyata bisa berisi banyak hal random: dari obrolan receh, agenda jalan-jalan, sampai momen yang dulu bikin bingung harus ketawa atau nangis. 🤍</p>
+        <p>Makasih sudah jadi teman yang bisa diajak menjalani banyak versi hari: yang seru, yang melelahkan, yang random, sampai yang nggak berjalan sesuai rencana. Aku suka karena kita masih punya ruang untuk jadi diri sendiri, belajar, dan tetap tumbuh berdampingan.</p>
+        <p>Dua tahun ini tentu nggak selalu mulus, tapi aku senang kita terus belajar mengenal satu sama lain. Semoga kita tetap bisa ngobrol dengan jujur, saling memberi ruang, dan memilih untuk memahami sebelum menyimpulkan.</p>
+        <p>Aku masih punya kuliah, kamu juga punya perjalananmu sendiri, dan masih banyak hal yang ingin kita usahakan. Semoga nanti meski kita punya kesibukan dan mungkin berada di tempat berbeda, kita tetap saling dukung, saling jaga, dan nggak capek jadi rumah satu sama lain. Semoga rezeki kita luas, sukses bareng, kaya raya bareng, lalu menikah wkwkk. Kalau Allah merestui sampai sana, semoga kita bisa sampai dengan versi diri yang lebih siap dan lebih baik.</p>
+        <p>Untuk sekarang, yuk lanjut kumpulin cerita. Masih banyak tempat yang belum kita datangi dan banyak hal receh yang belum sempat kita ketawain bareng.</p>
+        <p class="letter-sign">With love, always,<br><span>Desti ♡</span></p>
+      </div>
+    </section>
+
+<section class="final-section section" id="finale"><div class="final-sunflower">🌻</div><p class="eyebrow">AND THAT'S OUR LITTLE UNIVERSE</p><h2>Still my favorite<br><em>plot twist.</em></h2><p>Dua tahun, banyak episode, dan masih banyak side quest yang menunggu. Semoga kita tetap bisa ketawa bareng, saling menguatkan, dan menikmati prosesnya satu per satu. The story is still loading… ☀</p><div class="final-date">22 · 11 · 2024 <span>→</span> 22 · 11 · 2026</div><button class="primary-btn" id="hugBtn">Kirim peluk virtual <span>♡</span></button><div id="hugResult" class="hug-result"></div><footer>made with love & a little bit of sunflower magic · Desti for Farel</footer></section>
+  </main>
+
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-card"><button class="modal-close" id="modalClose" aria-label="Tutup">×</button><span class="modal-flower">✿</span><h3 id="modalTitle">A little note</h3><p id="modalText"></p><button class="primary-btn modal-ok" id="modalOk">Awww, okay ♡</button></div></div>
+  <div class="toast" id="toast">🌻 satu kelopak lagi!</div>
+  <audio id="gameBackgroundMusic" src="assets/audio/game-loop.mp3" preload="auto" loop></audio>
+  <script src="script.js?v=game-music-v2"></script>
+</body>
+</html>

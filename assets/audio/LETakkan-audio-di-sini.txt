@@ -1,0 +1,4 @@
+Untuk memutar lagu langsung di website (tanpa YouTube), letakkan file MP3 yang kamu miliki secara legal di folder ini dan beri nama tepat: 1000x.mp3
+Lagu: 1000X — Ghea Indrawari.
+Setelah file ada, tekan tombol ♫ di kanan atas website. Browser akan mulai memutar setelah tombol ditekan.
+File MP3 tidak disertakan dalam ZIP karena hak cipta lagu.

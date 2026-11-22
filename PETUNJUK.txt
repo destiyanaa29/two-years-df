@@ -1,0 +1,23 @@
+OUR LITTLE UNIVERSE — DESTI & FAREL
+
+CARA MENJALANKAN
+1. Ekstrak ZIP ini.
+2. Buka folder hasil ekstrak di VS Code.
+3. Letakkan foto-foto yang ingin dipakai di assets/photos/ (ikuti placeholder yang tersedia).
+4. Letakkan file MP3 untuk musik game di assets/audio/ dengan nama game-loop.mp3.
+5. Jika ingin soundtrack khusus halaman anniversary (1000X), letakkan file MP3 yang kamu miliki/berhak gunakan di assets/audio/ dengan nama 1000x.mp3.
+6. Jalankan index.html dengan ekstensi Live Server.
+7. Upload seluruh isi folder ke repository GitHub Pages.
+
+MUSIK GAME
+- Tombol not musik berada di kanan header.
+- Musik game diputar berulang selama halaman game aktif.
+- Musik berhenti saat berpindah ke halaman cerita atau halaman soundtrack.
+- Klik tombol not untuk mute/unmute.
+- Browser dapat meminta interaksi pertama sebelum audio mulai.
+
+SOUNDTRACK ANNIVERSARY
+- Halaman soundtrack khusus tetap terpisah dari musik game.
+- File soundtrack halaman tersebut menggunakan assets/audio/1000x.mp3.
+
+Catatan: File audio dan foto pribadi tidak disertakan dalam ZIP; tambahkan file milikmu sendiri ke folder assets yang tersedia.
